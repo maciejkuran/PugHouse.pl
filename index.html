@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pug House! - blog i społeczność mopsiarzy</title>
+    <meta
+      name="description"
+      content="Witaj w PUG HOUSE! Jestem Ewa, mama dwójki mopsów. To ja zarządzam gangiem mopsów.
+    Pug House to blog i społeczność."
+    />
+    <link rel="icon" type="image/x-icon" href="/img/Avatar pug house.png" />
     <link rel="stylesheet" href="https://use.typekit.net/hiu1ymc.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +23,11 @@
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
+    />
+    <link
+      href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css"
+      rel="stylesheet"
+      type="text/css"
     />
     <link rel="stylesheet" href="/css/main.css" />
   </head>
@@ -31,12 +42,15 @@
             <button class="theme-btn pink-theme-btn"></button>
             <button class="theme-btn blue-theme-btn"></button>
           </div>
+          <button class="close-btn close-navigation-btn">
+            <i class="ri-close-circle-fill"></i>
+          </button>
         </div>
         <ul>
-          <li><a href="#...">BLOG</a></li>
-          <li><a href="#...">GANG MEMBERS</a></li>
-          <li><a href="#...">SOCIAL MEDIA</a></li>
-          <li><a href="#...">KONTAKT</a></li>
+          <li><a href="#section-3-home">BLOG</a></li>
+          <li><a class="gang-members-nav-btn" href="">GANG MEMBERS</a></li>
+          <li><a href="#section-4-home">SOCIAL MEDIA</a></li>
+          <li><a href="#section-5-home">KONTAKT</a></li>
         </ul>
       </div>
       <button class="hamburger-icon"><i class="ri-menu-3-fill"></i></button>
@@ -73,18 +87,19 @@
         <h2>Dołącz do GANGU!</h2>
         <p>
           Pug House to blog i społeczność stworzona z myślą o Tobie.<br />
-          Zapisz swojego mopsa do gangu już teraz !
+          Zapisz siebie i swojego podopiecznego do gangu już teraz!
         </p>
         <ul>
-          <span class="highlight">Wyślij e-mail 📧:</span>
+          <span class="highlight">Korzyści: 😲</span>
         </ul>
-        <li>- podaj imię i miasto</li>
-        <li>- załącz zdjęcie profilowe</li>
+        <li><i class="ri-arrow-right-s-line"></i>merytoryczne artykuły na temat mopsów</li>
+        <li><i class="ri-arrow-right-s-line"></i>nowinki i plotki instagramowe & facebookowe</li>
+        <li><i class="ri-arrow-right-s-line"></i>polityka zero spamu</li>
         <li>
-          - zawrzyj w wiadomości zgodę na wykorzystanie zdjęcia w celu publikacji na stronie
-          internetowej i w mediach społecznościowych Pug House.
+          <i class="ri-arrow-right-s-line"></i>po zapisaniu się sprawdź maila 📧, bo otrzymasz
+          krótką instrukcję jak zgłosić do gangu swojego PUGA!
         </li>
-        <a href="mailto:ewa@pughouse.pl"><button class="yellow-btn">DOŁĄCZ</button></a>
+        <button class="yellow-btn join-gang-btn">DOŁĄCZ</button>
         <button class="pink-btn">Sprawdź członków</button>
       </div>
       <div class="section-1-home-graphic">
@@ -106,15 +121,22 @@
         <button class="pink-btn">ZGŁOŚ</button>
       </div>
       <div class="slider-wrapper">
-        <!-- <div class="slide">
+        <div class="slide">
           <img src="/img/Mikey pughouse img-1.jpg" alt="Mikey pug pughouse.pl" />
-        </div> -->
-        <!-- <div class="slide">
+        </div>
+        <div class="slide">
           <img src="/img/Mikey pughouse img-3.jpg" alt="Mikey pug pughouse.pl" />
-        </div> -->
+        </div>
         <div class="slide">
           <img src="/img/Molly pughouse img-2.JPG" alt="Molly pug pughouse.pl" />
         </div>
+        <div class="slide">
+          <img src="/img/Buddy pughouse img-2.jpg" alt="Buddy pug pughouse.pl" />
+        </div>
+        <div class="slide">
+          <img src="/img/Buddy Bentlay img-4.JPG" alt="Buddy i Bentlay pug pughouse.pl" />
+        </div>
+
         <button class="slider-btn next-slide-btn">
           <i class="ri-arrow-right-circle-fill"></i>
         </button>
@@ -183,7 +205,7 @@
       <img src="/img/Avatar pug house.png" alt="pughouse.pl avatar" />
     </section>
 
-    <section class="section-5-home section-divider">
+    <section class="section-5-home section-divider" id="section-5-home">
       <h3>Kontakt</h3>
       <img src="/img/Kontakt pughouse.png" alt="Kontakt pughouse.pl" />
       <a href="mailto:ewa@pughouse.pl"><button class="yellow-btn">email</button></a>
@@ -200,6 +222,44 @@
       </div>
     </footer>
 
+    <!-- ////////////////////////////////// -->
+    <!-- Reusable components -->
+    <button class="join-gang-btn join">DOŁĄCZ</button>
+
+    <gang-members-container></gang-members-container>
+
+    <sign-up-container></sign-up-container>
+
+    <welcome-letter-container></welcome-letter-container>
+
+    <cookies-container></cookies-container>
+
+    <div class="full-background-overlay hide"></div>
+
     <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/components.js"></script>
+    <script
+      type="text/javascript"
+      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+    ></script>
+    <script type="text/javascript">
+      (function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = "EMAIL";
+        ftypes[0] = "email";
+        fnames[1] = "FNAME";
+        ftypes[1] = "text";
+        fnames[2] = "LNAME";
+        ftypes[2] = "text";
+        fnames[3] = "ADDRESS";
+        ftypes[3] = "address";
+        fnames[4] = "PHONE";
+        ftypes[4] = "phone";
+        fnames[5] = "BIRTHDAY";
+        ftypes[5] = "birthday";
+      })(jQuery);
+      var $mcj = jQuery.noConflict(true);
+    </script>
   </body>
 </html>

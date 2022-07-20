@@ -7,11 +7,28 @@
   }
 }
 
-@media (max-width: 1357.98px) {
+@media (max-width: 1580.98px) {
   h1 {
     font-size: 5rem;
   }
 
+  .introduction-content {
+    img {
+      min-width: 14rem;
+      min-height: 14rem;
+    }
+  }
+
+  .member {
+    max-height: 35rem;
+    min-width: 15rem;
+    img {
+      max-width: 11rem;
+    }
+  }
+}
+
+@media (max-width: 1357.98px) {
   .card {
     height: 32rem;
     width: 22rem;
@@ -58,9 +75,29 @@
       }
     }
   }
+
+  .slider-wrapper {
+    min-width: 100%;
+  }
+
+  .slide {
+    img {
+      object-fit: cover;
+    }
+  }
 }
 
-@media (max-width: 1095px) {
+@media (max-width: 1178.98px) {
+  .gang-members-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sign-up-to-gang-container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 1095.98px) {
   .home-page-header {
     flex-direction: column;
   }
@@ -153,11 +190,40 @@
       max-width: 20rem;
     }
   }
+
+  .sign-up-text-wrapper {
+    margin-right: 0;
+  }
+
+  .sign-up-to-gang-container {
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 70vh;
+  }
+
+  #mc_embed_signup {
+    max-width: 70%;
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 927.98px) {
   .blog-posts-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .slider-wrapper {
+    min-width: 100%;
+    min-height: 50rem;
+  }
+
+  .section-gang-members {
+    max-width: 100%;
+  }
+
+  .welcome-letter-container {
+    min-width: 90%;
   }
 }
 
@@ -185,11 +251,46 @@
       max-width: 12rem;
     }
   }
+
+  .gang-members-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 705.98px) {
   .nav-wrapper {
     display: none;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    background-color: var(--color-strong-blue);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      flex-direction: column;
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .theme-options {
+    margin-bottom: 2rem;
+  }
+
+  .close-btn {
+    font-size: 3rem;
+  }
+
+  .close-navigation-btn {
+    display: inline;
+    position: absolute;
+    right: 2%;
   }
 
   .hamburger-icon {
@@ -233,6 +334,21 @@
       text-align: center;
     }
   }
+
+  .slider-wrapper {
+    min-width: 100%;
+    min-height: 40rem;
+  }
+
+  .cookies-container {
+    min-width: 80%;
+
+    p,
+    a,
+    .highlight {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 @media (max-width: 642.98px) {
@@ -255,6 +371,31 @@
       min-width: 8rem;
       min-height: 12rem;
     }
+  }
+
+  .sign-up-text-wrapper {
+    margin-top: 2rem;
+  }
+
+  .sign-up-to-gang-container {
+    padding: 2rem;
+
+    h3 {
+      // text-align: center;
+      font-size: 2.1rem;
+    }
+
+    li {
+      font-size: 1.2rem;
+    }
+
+    .highlight {
+      font-size: 1.4rem;
+    }
+  }
+
+  #mc_embed_signup {
+    max-width: 100%;
   }
 }
 @media (max-width: 575.98px) {
@@ -326,6 +467,24 @@
   .section-5-home {
     margin-bottom: 10rem;
   }
+
+  .slider-wrapper {
+    min-height: 30rem;
+  }
+
+  .gang-members-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .welcome-letter-container {
+    min-width: 90%;
+    padding: 2rem;
+
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 @media (max-width: 404.98px) {
@@ -345,6 +504,14 @@
   .main-footer {
     flex-wrap: wrap;
   }
+
+  .slider-wrapper {
+    min-height: 29rem;
+  }
+
+  .section-gang-members {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 342.98px) {
@@ -359,6 +526,18 @@
     img {
       min-width: 6rem;
       min-height: 10rem;
+    }
+  }
+
+  .slider-wrapper {
+    min-height: 20rem;
+  }
+
+  .member {
+    max-height: 32rem;
+    min-width: 12rem;
+    img {
+      max-width: 9rem;
     }
   }
 }

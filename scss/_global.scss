@@ -13,6 +13,7 @@
   --color-yellow-hover: #e37a0f;
   --color-dark-grey: #707070;
   --color-light-grey: #dbdbdb;
+  --color-very-light-grey: rgb(249, 249, 249);
 }
 
 html {
@@ -87,6 +88,30 @@ button {
   -moz-appearance: none;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-strong-pink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-strong-pink-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.hide {
+  display: none;
 }
 
 .yellow-btn {
