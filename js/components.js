@@ -29,7 +29,26 @@ class websiteNav extends HTMLElement {
   }
 }
 
-customElements.define("navigation", websiteNav);
+customElements.define("website-nav", websiteNav);
+
+////Footer component
+
+class websiteFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `<footer class="main-footer">
+    <h4>Copyright © pughouse.pl</h4>
+    <a href="/polityka-prywatnosci">
+      <h5>Polityka prywatności</h5>
+    </a>
+    <div class="social-media-icons-wrapper">
+      <button class="social-media-icon"><i class="ri-instagram-fill"></i></button>
+      <button class="social-media-icon"><i class="ri-facebook-circle-fill"></i></button>
+    </div>
+  </footer>`;
+  }
+}
+
+customElements.define("website-footer", websiteFooter);
 
 ////Cookies component
 class cookies extends HTMLElement {
@@ -68,7 +87,7 @@ customElements.define("welcome-letter-container", welcomeLetter);
 ////Sign up container
 class signUpContainer extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<div class="sign-up-to-gang-container">
+    this.innerHTML = `<div class="sign-up-to-gang-container hide">
         <button class="close-sign-up-section-btn close-btn">
           <i class="ri-close-circle-fill"></i>
         </button>

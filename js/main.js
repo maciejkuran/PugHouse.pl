@@ -6,6 +6,7 @@ const headerContainer = document.querySelector(".header-container");
 
 ////Setting 100vh on header home page
 const setHeaderVh = () => {
+  if (!headerContainer) return;
   headerContainer.style.minHeight = `calc(100vh - ${navHeight}px)`;
 };
 setHeaderVh();
@@ -19,6 +20,8 @@ const welcomeGang = () => {
   const checkmark = document.querySelector("#gdpr_96662");
   const emailInput = document.querySelector("#mce-EMAIL");
   const nameInput = document.querySelector("#mce-FNAME");
+
+  if (!joinGangBtn) return;
 
   joinGangBtn.addEventListener("click", (e) => {
     if (checkmark.checked && emailInput.value.includes("@") && nameInput.value !== "") {

@@ -32,29 +32,8 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
-    <nav class="website-navigation">
-      <a href="/"><img src="/img/Logo pughouse.png" alt="Pug House logo" /></a>
-      <div class="nav-wrapper">
-        <div class="theme-options">
-          <p>Motyw</p>
-          <div>
-            <button class="theme-btn white-theme-btn"></button>
-            <button class="theme-btn pink-theme-btn"></button>
-            <button class="theme-btn blue-theme-btn"></button>
-          </div>
-          <button class="close-btn close-navigation-btn">
-            <i class="ri-close-circle-fill"></i>
-          </button>
-        </div>
-        <ul>
-          <li><a href="#section-3-home">BLOG</a></li>
-          <li><a class="gang-members-nav-btn" href="">GANG MEMBERS</a></li>
-          <li><a href="#section-4-home">SOCIAL MEDIA</a></li>
-          <li><a href="#section-5-home">KONTAKT</a></li>
-        </ul>
-      </div>
-      <button class="hamburger-icon"><i class="ri-menu-3-fill"></i></button>
-    </nav>
+    <website-nav></website-nav>
+
     <div class="header-container">
       <header class="home-page-header">
         <div class="introduction-content">
@@ -211,16 +190,7 @@
       <a href="mailto:ewa@pughouse.pl"><button class="yellow-btn">email</button></a>
     </section>
 
-    <footer class="main-footer">
-      <h4>Copyright © pughouse.pl</h4>
-      <a href="/polityka-prywatnosci">
-        <h5>Polityka prywatności</h5>
-      </a>
-      <div class="social-media-icons-wrapper">
-        <button class="social-media-icon"><i class="ri-instagram-fill"></i></button>
-        <button class="social-media-icon"><i class="ri-facebook-circle-fill"></i></button>
-      </div>
-    </footer>
+    <website-footer></website-footer>
 
     <!-- ////////////////////////////////// -->
     <!-- Reusable components -->
@@ -235,9 +205,9 @@
     <cookies-container></cookies-container>
 
     <div class="full-background-overlay hide"></div>
-
-    <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/components.js"></script>
+    <script type="module" src="/js/main.js"></script>
+
     <script
       type="text/javascript"
       src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
