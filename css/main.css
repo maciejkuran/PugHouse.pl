@@ -809,6 +809,15 @@ button {
   background-color: var(--color-strong-pink-hover);
 }
 
+.highlight-form:after {
+  content: "*";
+  color: #e85c41;
+  font-size: 2rem;
+  position: absolute;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
 .welcome-letter-container, .cookies-container {
   z-index: 99;
   position: fixed;

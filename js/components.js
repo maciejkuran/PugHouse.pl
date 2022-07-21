@@ -87,7 +87,7 @@ customElements.define("welcome-letter-container", welcomeLetter);
 ////Sign up container
 class signUpContainer extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<div class="sign-up-to-gang-container hide">
+    this.innerHTML = `<div class="sign-up-to-gang-container">
         <button class="close-sign-up-section-btn close-btn">
           <i class="ri-close-circle-fill"></i>
         </button>
@@ -160,7 +160,8 @@ class signUpContainer extends HTMLElement {
                         name="gdpr[96662]"
                         value="Y"
                         class="av-checkbox gdpr"
-                      /><span class="highlight">Email</span>
+                      /><span class="highlight highlight-form">Email</span>
+                      
                     </label>
                   </fieldset>
                   <p>

@@ -540,6 +540,14 @@
   background-color: var(--color-strong-pink-hover);
 }
 
+.highlight-form:after {
+  content: "*";
+  color: #e85c41;
+  font-size: 2rem;
+  position: absolute;
+  transform: translateY(-1rem);
+}
+
 ////////
 
 .welcome-letter-container {
