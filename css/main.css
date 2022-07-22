@@ -181,8 +181,9 @@ button {
   top: 0;
   left: 0;
   padding: 0.4rem;
-  background-color: rgba(255, 255, 255, 0.872);
-  z-index: 99;
+  z-index: 1;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
 }
 
 .close-navigation-btn {
@@ -280,6 +281,36 @@ button {
   margin-top: 10rem;
 }
 
+.home-h1-animation {
+  -webkit-animation: change-h1-color 1s;
+          animation: change-h1-color 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes change-h1-color {
+  from {
+    color: black;
+  }
+  to {
+    color: var(--color-strong-pink);
+  }
+}
+
+@keyframes change-h1-color {
+  from {
+    color: black;
+  }
+  to {
+    color: var(--color-strong-pink);
+  }
+}
 .introduction-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,11 +325,42 @@ button {
 }
 .introduction-content img {
   max-width: 20rem;
+  -webkit-animation: animate-ewa-avatar 2s;
+          animation: animate-ewa-avatar 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 .introduction-content div {
   margin-left: 2rem;
 }
 
+@-webkit-keyframes animate-ewa-avatar {
+  from {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  to {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+}
+
+@keyframes animate-ewa-avatar {
+  from {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  to {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+}
 .pug-cards-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,7 +539,7 @@ button {
 }
 
 .slider-btn {
-  font-size: 3.5rem;
+  font-size: 4rem;
   position: absolute;
   color: var(--color-strong-pink);
 }
@@ -892,7 +954,7 @@ button {
 }
 
 .full-background-overlay {
-  z-index: 0;
+  z-index: 2;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
