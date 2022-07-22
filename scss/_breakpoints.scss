@@ -3,13 +3,14 @@
     img {
       max-height: 25rem;
       max-width: 25rem;
+      object-position: center;
     }
   }
 }
 
 @media (max-width: 1580.98px) {
   h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   .introduction-content {
@@ -34,8 +35,7 @@
     width: 22rem;
 
     img {
-      min-width: 15rem;
-      min-height: 20rem;
+      max-width: 19rem;
     }
 
     h3 {
@@ -43,11 +43,14 @@
     }
   }
 
+  .pug-cards-wrapper {
+    justify-content: center;
+  }
+
   .introduction-content {
     max-width: 50%;
     img {
-      min-width: 14rem;
-      min-height: 14rem;
+      max-width: 15rem;
     }
   }
 
@@ -94,6 +97,12 @@
 
   .sign-up-to-gang-container {
     min-width: 100%;
+  }
+
+  .introduction-content {
+    img {
+      max-width: 13rem;
+    }
   }
 }
 
@@ -442,6 +451,10 @@
   .join {
     font-size: 1.5rem;
     padding: 0.5rem;
+  }
+
+  .blog-post-container {
+    margin-top: 9rem;
   }
 }
 @media (max-width: 575.98px) {

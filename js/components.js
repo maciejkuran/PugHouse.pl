@@ -3,28 +3,35 @@
 ////Navigation component
 class websiteNav extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<nav class="website-navigation">
-    <a href="/"><img src="/img/Logo pughouse.png" alt="Pug House logo" /></a>
-    <div class="nav-wrapper">
-      <div class="theme-options">
-        <p>Motyw</p>
-        <div>
-          <button color="#FFFFFF" class="theme-btn white-theme-btn active-theme"></button>
-          <button color="#FFEFFD" class="theme-btn pink-theme-btn"></button>
-          <button color="#E2FEFF" class="theme-btn blue-theme-btn"></button>
+    this.innerHTML = `<nav class="website-navigation navigation-sticky-properties">
+    <div class="nav-container">
+      <a href="/"
+        ><img src="/img/Logo pughouse.png" alt="Pug House logo"
+      /></a>
+      <div class="nav-wrapper">
+        <div class="theme-options">
+          <p>Motyw</p>
+          <div>
+            <button
+              color="#FFFFFF"
+              class="theme-btn white-theme-btn active-theme"
+            ></button>
+            <button color="#FFEFFD" class="theme-btn pink-theme-btn"></button>
+            <button color="#E2FEFF" class="theme-btn blue-theme-btn"></button>
+          </div>
+          <button class="close-btn close-navigation-btn">
+            <i class="ri-close-circle-fill"></i>
+          </button>
         </div>
-        <button class="close-btn close-navigation-btn">
-          <i class="ri-close-circle-fill"></i>
-        </button>
+        <ul>
+          <li><a href="#section-3-home">BLOG</a></li>
+          <li><a class="gang-members-nav-btn" href="">GANG MEMBERS</a></li>
+          <li><a href="#section-4-home">SOCIAL MEDIA</a></li>
+          <li><a href="#section-5-home">KONTAKT</a></li>
+        </ul>
       </div>
-      <ul>
-        <li><a href="#section-3-home">BLOG</a></li>
-        <li><a class="gang-members-nav-btn" href="">GANG MEMBERS</a></li>
-        <li><a href="#section-4-home">SOCIAL MEDIA</a></li>
-        <li><a href="#section-5-home">KONTAKT</a></li>
-      </ul>
+      <button class="hamburger-icon"><i class="ri-menu-3-fill"></i></button>
     </div>
-    <button class="hamburger-icon"><i class="ri-menu-3-fill"></i></button>
   </nav>`;
   }
 }

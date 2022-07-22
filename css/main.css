@@ -154,9 +154,15 @@ button {
 
 .header-container {
   padding-top: 10rem;
+  min-height: 100vh;
 }
 
-.website-navigation, .home-page-header {
+.website-navigation img {
+  max-width: 20rem;
+}
+
+.nav-container {
+  max-width: 165rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,10 +172,17 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto;
 }
-.website-navigation img, .home-page-header img {
-  max-width: 25rem;
-  max-height: 10rem;
+
+.navigation-sticky-properties {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.872);
+  z-index: 99;
 }
 
 .close-navigation-btn {
@@ -254,6 +267,19 @@ button {
   background-color: var(--color-light-blue);
 }
 
+.home-page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10rem;
+}
+
 .introduction-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -267,8 +293,7 @@ button {
   max-width: 45%;
 }
 .introduction-content img {
-  min-width: 22rem;
-  min-height: 22rem;
+  max-width: 20rem;
 }
 .introduction-content div {
   margin-left: 2rem;
@@ -303,8 +328,7 @@ button {
           filter: drop-shadow(0 0 0.8rem rgb(133, 133, 133));
 }
 .card img {
-  min-width: 20rem;
-  min-height: 30rem;
+  max-width: 25rem;
   -webkit-animation: move-heads 1s;
           animation: move-heads 1s;
   -webkit-animation-iteration-count: infinite;
@@ -886,6 +910,7 @@ button {
   max-width: 120rem;
   margin: auto;
   margin-top: 3rem;
+  margin-top: 12rem;
   position: relative;
 }
 
@@ -982,11 +1007,13 @@ button {
   .post img {
     max-height: 25rem;
     max-width: 25rem;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 @media (max-width: 1580.98px) {
   h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .introduction-content img {
     min-width: 14rem;
@@ -1006,18 +1033,21 @@ button {
     width: 22rem;
   }
   .card img {
-    min-width: 15rem;
-    min-height: 20rem;
+    max-width: 19rem;
   }
   .card h3 {
     font-size: 3rem;
+  }
+  .pug-cards-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .introduction-content {
     max-width: 50%;
   }
   .introduction-content img {
-    min-width: 14rem;
-    min-height: 14rem;
+    max-width: 15rem;
   }
   .blog-posts-container {
     gap: 2rem;
@@ -1049,6 +1079,9 @@ button {
   }
   .sign-up-to-gang-container {
     min-width: 100%;
+  }
+  .introduction-content img {
+    max-width: 13rem;
   }
 }
 @media (max-width: 1095.98px) {
@@ -1367,6 +1400,9 @@ li b,
   .join {
     font-size: 1.5rem;
     padding: 0.5rem;
+  }
+  .blog-post-container {
+    margin-top: 9rem;
   }
 }
 @media (max-width: 575.98px) {
