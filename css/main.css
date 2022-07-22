@@ -148,6 +148,10 @@ button {
   margin-bottom: 15rem;
 }
 
+.post-section-divider {
+  margin-bottom: 5rem;
+}
+
 .header-container {
   padding-top: 10rem;
 }
@@ -229,9 +233,13 @@ button {
 }
 
 .theme-btn {
-  padding: 0.7rem;
+  padding: 0.9rem;
   border-radius: 50%;
   border: 1px solid var(--color-dark-grey);
+}
+
+.active-theme {
+  border: 2px solid var(--color-black);
 }
 
 .white-theme-btn {
@@ -711,6 +719,7 @@ button {
   background-color: var(--color-strong-blue);
   padding: 1rem;
   font-size: 2rem;
+  border: 1px solid var(--color-black);
 }
 
 .join:hover {
@@ -868,6 +877,105 @@ button {
   position: fixed;
   min-width: 100%;
   min-height: 100%;
+}
+
+.blog-post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 120rem;
+  margin: auto;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.header-post-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-date {
+  color: var(--color-strong-pink);
+  font-weight: 600;
+  font-family: chaloops, sans-serif;
+  margin-right: 1rem;
+}
+
+.post-content-wrapper {
+  max-width: 70%;
+}
+.post-content-wrapper header .post-head-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.post-content-wrapper header img {
+  max-width: 100%;
+  max-height: 50rem;
+  margin-bottom: 3rem;
+}
+
+.back-to-home-page {
+  font-weight: 600;
+}
+.back-to-home-page i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.back-to-home-page:hover {
+  color: var(--color-dark-grey);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.post-aside-container {
+  margin-left: 2rem;
+  max-width: 60rem;
+  height: 30vh;
+  position: sticky;
+  top: 10%;
+}
+
+.social-media-banner, .join-gang-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--color-yellow);
+  padding: 2rem;
+  border-radius: 5px;
+}
+.social-media-banner h4, .join-gang-banner h4 {
+  text-align: center;
+}
+
+.join-gang-banner {
+  background-color: var(--color-strong-blue);
+  margin-top: 2rem;
+}
+.join-gang-banner p,
+.join-gang-banner .highlight {
+  font-size: 1.6rem;
+}
+.join-gang-banner button {
+  font-size: 1.6rem;
 }
 
 @media (max-width: 1604.98px) {
@@ -1058,6 +1166,15 @@ li b,
   .welcome-letter-container {
     min-width: 90%;
   }
+  .post-content-wrapper header h1 {
+    font-size: 3rem;
+  }
+  .back-to-home-page {
+    font-size: 1.5rem;
+  }
+  .back-to-home-page i {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 767.98px) {
   .website-navigation img {
@@ -1109,6 +1226,9 @@ li b,
   }
   .theme-options {
     margin-bottom: 2rem;
+  }
+  .theme-btn {
+    padding: 1rem;
   }
   .close-btn {
     font-size: 3rem;
@@ -1169,6 +1289,37 @@ li b,
 .cookies-container .highlight {
     font-size: 1.3rem;
   }
+  .blog-post-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .post-content-wrapper {
+    max-width: 100%;
+  }
+  .post-aside-container {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    position: -webkit-sticky;
+    position: initial;
+    top: 10%;
+    margin-bottom: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 @media (max-width: 642.98px) {
   .introduction-content {
@@ -1212,6 +1363,10 @@ li b,
   }
   #mc_embed_signup {
     max-width: 100%;
+  }
+  .join {
+    font-size: 1.5rem;
+    padding: 0.5rem;
   }
 }
 @media (max-width: 575.98px) {
@@ -1278,6 +1433,9 @@ li,
     padding: 2rem;
   }
   .welcome-letter-container h3 {
+    font-size: 2.5rem;
+  }
+  .post-content-wrapper header h1 {
     font-size: 2.5rem;
   }
 }

@@ -36,12 +36,17 @@
   </head>
   <body>
     <website-nav></website-nav>
-
     <div class="blog-post-container">
-      <p class="back-to-home-page"><i class="ri-arrow-left-circle-fill"></i>Powrót</p>
-      <article>
+      <article class="post-content-wrapper">
         <header>
-          <h1>Mopsy gubią sierść jak szalone! Jak przeciwdziałać.</h1>
+          <a class="back-to-home-page" href="/#section-3-home"
+            ><i class="ri-arrow-left-circle-fill"></i>Powrót</a
+          >
+
+          <h1>
+            Mopsy gubią sierść jak szalone!<br />
+            Jak przeciwdziałać.
+          </h1>
           <div class="header-post-wrapper">
             <p class="post-date">15.07.2022</p>
             <div
@@ -58,53 +63,45 @@
               >
             </div>
           </div>
-          <img src="/img/Mikey pughouse img-1.jpg" alt="" />
+          <div class="post-head-img">
+            <img src="/img/Mikey pughouse img-1.jpg" alt="" />
+          </div>
         </header>
 
-        <section>
+        <section class="post-section-divider">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa cupiditate incidunt
-            esse quis amet consectetur praesentium, sapiente ea ad veniam placeat assumenda, cum in.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa
+            cupiditate incidunt esse quis amet consectetur praesentium, sapiente
+            ea ad veniam placeat assumenda, cum in.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati recusandae,
-            repudiandae officiis optio suscipit, quasi, ab ipsam explicabo minus error possimus
-            earum vitae magnam deleniti mollitia nesciunt veritatis in et culpa eveniet. Harum,
-            perferendis! Enim eveniet, eligendi, iste velit consequatur est porro nisi facere aut
-            accusamus ducimus obcaecati qui animi.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, adipisci blanditiis
-            cumque earum, ullam fuga ipsam amet consequatur mollitia inventore consectetur possimus
-            optio itaque a facilis culpa in et magni labore repellendus atque porro. Repudiandae
-            voluptate in officiis provident, magni distinctio sequi asperiores fuga aliquam, minus
-            ea laudantium vero natus!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium harum odit quo
-            dolore perferendis a ratione eaque nemo nulla, at nihil vero tempore fugiat atque? Quasi
-            illo atque unde praesentium explicabo deserunt laudantium, aliquam quas?
+            Lorem ipsum dolor sit amet,
+            <span class="highlight">consectetur</span> adipisicing elit.
+            Obcaecati recusandae, repudiandae officiis optio suscipit, quasi, ab
+            ipsam explicabo minus error possimus earum vitae magnam deleniti
+            mollitia nesciunt <span class="highlight">veritatis</span> in et
+            culpa eveniet. Harum, perferendis! Enim eveniet, eligendi, iste
+            velit consequatur est porro nisi facere aut accusamus ducimus
+            obcaecati qui animi.
           </p>
         </section>
-        <p class="back-to-home-page"><i class="ri-arrow-left-circle-fill"></i>Powrót</p>
-      </article>
-      <aside>
-        <div class="social-media-banner">
-          <h4>Pug House w Social Media</h4>
-          <div class="social-media-icons-wrapper">
-            <button class="social-media-icon"><i class="ri-instagram-fill"></i></button>
-            <button class="social-media-icon"><i class="ri-facebook-circle-fill"></i></button>
-          </div>
-        </div>
-        <div class="join-gang-banner">
-          <h4>Dołącz do GANGU!</h4>
+        <section class="post-section-divider">
+          <h2>HELLO!</h2>
           <p>
-            <span class="highlight">Pug House</span> to społeczność mopsiarzy. Sprawdź korzyści i
-            dołącz do nas!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem omnis
+            id harum ipsam quis adipisci, distinctio voluptate fuga dignissimos
+            molestias itaque labore fugit! Accusamus ipsa incidunt vero culpa
+            nesciunt assumenda dicta veniam voluptatum voluptatibus dolores
+            cupiditate neque fugiat, nemo nisi illo. Maiores, debitis dolore
+            exercitationem laborum totam sed corrupti tenetur.
           </p>
-          <button class="pink-btn join-gang-btn">SPRAWDŹ!</button>
-        </div>
-      </aside>
+          <a class="back-to-home-page" href="/#section-3-home"
+            ><i class="ri-arrow-left-circle-fill"></i>Powrót</a
+          >
+        </section>
+      </article>
+
+      <post-sidebar></post-sidebar>
     </div>
 
     <website-footer></website-footer>
@@ -125,5 +122,15 @@
 
     <script type="module" src="/js/components.js"></script>
     <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/validation-mailchimp.js"></script>
+
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v14.0"
+      nonce="tZpmo4qp"
+    ></script>
   </body>
 </html>

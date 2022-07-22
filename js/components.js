@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 ////Navigation component
 class websiteNav extends HTMLElement {
@@ -9,9 +9,9 @@ class websiteNav extends HTMLElement {
       <div class="theme-options">
         <p>Motyw</p>
         <div>
-          <button class="theme-btn white-theme-btn"></button>
-          <button class="theme-btn pink-theme-btn"></button>
-          <button class="theme-btn blue-theme-btn"></button>
+          <button color="#FFFFFF" class="theme-btn white-theme-btn active-theme"></button>
+          <button color="#FFEFFD" class="theme-btn pink-theme-btn"></button>
+          <button color="#E2FEFF" class="theme-btn blue-theme-btn"></button>
         </div>
         <button class="close-btn close-navigation-btn">
           <i class="ri-close-circle-fill"></i>
@@ -29,7 +29,7 @@ class websiteNav extends HTMLElement {
   }
 }
 
-customElements.define("website-nav", websiteNav);
+customElements.define('website-nav', websiteNav);
 
 ////Footer component
 
@@ -48,7 +48,7 @@ class websiteFooter extends HTMLElement {
   }
 }
 
-customElements.define("website-footer", websiteFooter);
+customElements.define('website-footer', websiteFooter);
 
 ////Cookies component
 class cookies extends HTMLElement {
@@ -67,12 +67,12 @@ class cookies extends HTMLElement {
   }
 }
 
-customElements.define("cookies-container", cookies);
+customElements.define('cookies-container', cookies);
 
 ////Welcome letter when user signed up
 class welcomeLetter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `  <div class="welcome-letter-container hide">
+    this.innerHTML = `  <div class="welcome-letter-container popup hide">
         <h3>Dołączyłeś do GANGU! 😎</h3>
         <p>
           Sprawdź teraz <span class="highlight">skrzynkę mailową 📧</span>, bo otrzymasz krótką
@@ -82,12 +82,12 @@ class welcomeLetter extends HTMLElement {
   }
 }
 
-customElements.define("welcome-letter-container", welcomeLetter);
+customElements.define('welcome-letter-container', welcomeLetter);
 
 ////Sign up container
 class signUpContainer extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<div class="sign-up-to-gang-container">
+    this.innerHTML = `<div class="sign-up-to-gang-container  popup hide">
         <button class="close-sign-up-section-btn close-btn">
           <i class="ri-close-circle-fill"></i>
         </button>
@@ -160,7 +160,7 @@ class signUpContainer extends HTMLElement {
                         name="gdpr[96662]"
                         value="Y"
                         class="av-checkbox gdpr"
-                      /><span class="highlight highlight-form">Email</span>
+                      /><span class="highlight highlight-form">ZGODA!</span>
                       
                     </label>
                   </fieldset>
@@ -225,13 +225,13 @@ class signUpContainer extends HTMLElement {
   }
 }
 
-customElements.define("sign-up-container", signUpContainer);
+customElements.define('sign-up-container', signUpContainer);
 
 ////Gang members component
 
 class gangMembers extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<div class="section-gang-members hide">
+    this.innerHTML = `<div class="section-gang-members popup hide">
         <h3>GANG MEMBERS</h3>
         <button class="close-btn"><i class="ri-close-circle-fill"></i></button>
         <div class="gang-members-wrapper">
@@ -305,4 +305,34 @@ class gangMembers extends HTMLElement {
   }
 }
 
-customElements.define("gang-members-container", gangMembers);
+customElements.define('gang-members-container', gangMembers);
+
+///Post sidebar component
+
+class postSidebar extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `<aside class="post-aside-container">
+    <div class="social-media-banner">
+      <h4>Pug House w Social Media</h4>
+      <div class="social-media-icons-wrapper">
+        <button class="social-media-icon">
+          <i class="ri-instagram-fill"></i>
+        </button>
+        <button class="social-media-icon">
+          <i class="ri-facebook-circle-fill"></i>
+        </button>
+      </div>
+    </div>
+    <div class="join-gang-banner">
+      <h4>Dołącz do GANGU!</h4>
+      <p>
+        <span class="highlight">Pug House</span> to społeczność mopsiarzy.
+        Sprawdź korzyści i dołącz do nas!
+      </p>
+      <button class="pink-btn join-gang-btn">SPRAWDŹ!</button>
+    </div>
+  </aside>`;
+  }
+}
+
+customElements.define('post-sidebar', postSidebar);

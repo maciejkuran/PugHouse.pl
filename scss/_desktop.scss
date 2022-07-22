@@ -64,9 +64,13 @@
 }
 
 .theme-btn {
-  padding: 0.7rem;
+  padding: 0.9rem;
   border-radius: 50%;
   border: 1px solid var(--color-dark-grey);
+}
+
+.active-theme {
+  border: 2px solid var(--color-black);
 }
 
 .white-theme-btn {
@@ -297,7 +301,7 @@
 
     h5 {
       margin: 0;
-      font-family: "Poppins", sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 600;
     }
   }
@@ -445,6 +449,7 @@
   background-color: var(--color-strong-blue);
   padding: 1rem;
   font-size: 2rem;
+  border: 1px solid var(--color-black);
 }
 
 .join:hover {
@@ -486,7 +491,7 @@
   margin-top: 1rem;
 }
 
-#mc-embedded-subscribe-form input[type="checkbox"] {
+#mc-embedded-subscribe-form input[type='checkbox'] {
   display: inline;
   width: auto;
   margin-right: 10px;
@@ -541,7 +546,7 @@
 }
 
 .highlight-form:after {
-  content: "*";
+  content: '*';
   color: #e85c41;
   font-size: 2rem;
   position: absolute;
@@ -591,4 +596,93 @@
   position: fixed;
   min-width: 100%;
   min-height: 100%;
+}
+
+.blog-post-container {
+  display: flex;
+  max-width: 120rem;
+  margin: auto;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.header-post-wrapper {
+  display: flex;
+}
+
+.post-date {
+  color: var(--color-strong-pink);
+  font-weight: 600;
+  font-family: chaloops, sans-serif;
+  margin-right: 1rem;
+}
+
+.post-content-wrapper {
+  max-width: 70%;
+  // padding: 3rem;
+
+  header {
+    .post-head-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      max-width: 100%;
+      max-height: 50rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.back-to-home-page {
+  font-weight: 600;
+
+  i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.back-to-home-page:hover {
+  color: var(--color-dark-grey);
+  transition: 500ms;
+}
+
+.post-aside-container {
+  margin-left: 2rem;
+  max-width: 60rem;
+  height: 30vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+}
+
+.social-media-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-yellow);
+  padding: 2rem;
+  border-radius: 5px;
+
+  h4 {
+    text-align: center;
+  }
+}
+
+.join-gang-banner {
+  @extend .social-media-banner;
+  background-color: var(--color-strong-blue);
+  margin-top: 2rem;
+
+  p,
+  .highlight {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1.6rem;
+  }
 }
