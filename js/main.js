@@ -113,7 +113,7 @@ showNav();
 
 //Closing nav
 const closeNav = () => {
-  if (mediaQuery.matches) {
+  if (mediaQuery.matches && websiteNav.style.display === 'flex') {
     websiteNav.style.display = 'none';
     backgroundOverlay.classList.add('hide');
   }

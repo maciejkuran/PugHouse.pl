@@ -1,3 +1,4 @@
+//DISCLAIMER!
 //The author of this script is Jorge Pinon
 //https://gist.github.com/jorgepinon/33b5f22cef0065732e3aeffabb4e2f12
 
