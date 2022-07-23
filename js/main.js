@@ -217,10 +217,11 @@ const allPopups = document.querySelectorAll('.popup');
 
 backgroundOverlay.addEventListener('click', () => {
   closeNav();
-
   allPopups.forEach(popup => {
-    popup.classList.add('hide');
-    backgroundOverlay.classList.add('hide');
+    if (!popup.classList.contains('hide')) {
+      popup.classList.add('hide');
+      backgroundOverlay.classList.add('hide');
+    }
   });
 });
 
@@ -312,7 +313,7 @@ const observeSections = (entries, observer) => {
   if (!entry.isIntersecting) return;
 
   if (entry.isIntersecting) {
-    entry.target.classList.remove('section-effect');
+    entry.target.classList.remove('section-hidden');
   }
 
   observer.unobserve(entry.target);
@@ -325,6 +326,32 @@ const sectionObserver = new IntersectionObserver(observeSections, {
 });
 
 allSections.forEach(section => {
-  section.classList.add('section-effect');
+  section.classList.add('section-hidden');
   sectionObserver.observe(section);
 });
+
+////Cookies popup
+const cookiesAcceptBtn = document.querySelector('.cookies-accept-btn');
+const cookiesContainer = document.querySelector('.cookies-container');
+
+const showCookiesInfo = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('pughouse-cookies') === 'accepted') {
+      cookiesContainer.classList.add('hide');
+    } else {
+      cookiesContainer.classList.remove('hide');
+      backgroundOverlay.classList.remove('hide');
+      cookiesStoreData();
+    }
+  });
+};
+
+showCookiesInfo();
+
+const cookiesStoreData = () => {
+  cookiesAcceptBtn.addEventListener('click', () => {
+    localStorage.setItem('pughouse-cookies', 'accepted');
+    cookiesContainer.classList.add('hide');
+    backgroundOverlay.classList.add('hide');
+  });
+};

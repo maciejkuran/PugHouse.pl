@@ -1076,10 +1076,9 @@ button {
   scroll-margin: 120px;
 }
 
-.section-effect {
+.section-hidden {
   -webkit-transform: translateY(8rem);
           transform: translateY(8rem);
-  opacity: 0;
 }
 
 @media (max-width: 1604.98px) {

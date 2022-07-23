@@ -42,14 +42,20 @@ customElements.define('website-nav', websiteNav);
 
 class websiteFooter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<footer class="main-footer">
+    this.innerHTML = ` <footer class="main-footer">
     <h4>Copyright © pughouse.pl</h4>
     <a href="/polityka-prywatnosci">
       <h5>Polityka prywatności</h5>
     </a>
     <div class="social-media-icons-wrapper">
-      <button class="social-media-icon"><i class="ri-instagram-fill"></i></button>
-      <button class="social-media-icon"><i class="ri-facebook-circle-fill"></i></button>
+      <a target="_blank" href="https://www.instagram.com/pug_house_gang/"
+        ><button class="social-media-icon">
+          <i class="ri-instagram-fill"></i></button
+      ></a>
+      <a target="_blank" href="https://www.facebook.com/PugHouseGang"
+        ><button class="social-media-icon">
+          <i class="ri-facebook-circle-fill"></i></button
+      ></a>
     </div>
   </footer>`;
   }
@@ -235,7 +241,6 @@ class signUpContainer extends HTMLElement {
 customElements.define('sign-up-container', signUpContainer);
 
 ////Gang members component
-
 class gangMembers extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<div class="section-gang-members popup hide">
@@ -314,20 +319,23 @@ class gangMembers extends HTMLElement {
 
 customElements.define('gang-members-container', gangMembers);
 
-///Post sidebar component
-
+////Post sidebar component
 class postSidebar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<aside class="post-aside-container">
     <div class="social-media-banner">
       <h4>Pug House w Social Media</h4>
       <div class="social-media-icons-wrapper">
-        <button class="social-media-icon">
-          <i class="ri-instagram-fill"></i>
-        </button>
-        <button class="social-media-icon">
-          <i class="ri-facebook-circle-fill"></i>
-        </button>
+        <a target="_blank" href="https://www.instagram.com/pug_house_gang/">
+          <button class="social-media-icon">
+            <i class="ri-instagram-fill"></i>
+          </button>
+        </a>
+        <a target="_blank" href="https://www.facebook.com/PugHouseGang">
+          <button class="social-media-icon">
+            <i class="ri-facebook-circle-fill"></i>
+          </button>
+        </a>
       </div>
     </div>
     <div class="join-gang-banner">
