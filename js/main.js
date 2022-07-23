@@ -1,6 +1,6 @@
 'use strict';
 
-////Changing theme
+//////CHANGING THEME
 const themeBtns = document.querySelectorAll('.theme-btn');
 let activeBtn;
 
@@ -66,7 +66,7 @@ const getSavedTheme = () => {
 
 document.addEventListener('DOMContentLoaded', getSavedTheme);
 
-////Thank you popup (after signup)
+//////Thank you popup (after clicking signup)
 const joinGangBtn = document.querySelector('#mc-embedded-subscribe');
 const signUpContainer = document.querySelector('.sign-up-to-gang-container');
 const welcomeContainer = document.querySelector('.welcome-letter-container');
@@ -92,6 +92,7 @@ const welcomeGang = () => {
 
 welcomeGang();
 
+//////NAVIGATION
 ////Mobile/tablet navigation
 const hamburgerIcon = document.querySelector('.hamburger-icon');
 const websiteNav = document.querySelector('.nav-wrapper');
@@ -110,8 +111,7 @@ const showNav = () => {
 
 showNav();
 
-//Closing NAV
-
+//Closing nav
 const closeNav = () => {
   if (mediaQuery.matches) {
     websiteNav.style.display = 'none';
@@ -127,14 +127,13 @@ navCloseBtn.addEventListener('click', closeNav);
 window.addEventListener('resize', () => {
   if (!mediaQuery.matches) {
     websiteNav.style.display = 'flex';
-    backgroundOverlay.classList.add('hide');
   }
   if (mediaQuery.matches) {
     websiteNav.style.display = 'none';
   }
 });
 
-//// Hide Navbar when scroll down, show when scroll up
+// Hide Navbar when scroll down, show when scroll up
 const navbar = document.querySelector('.website-navigation');
 let previousPosition;
 
@@ -151,10 +150,33 @@ window.addEventListener('scroll', e => {
   if (currentPosition === 0) {
     navbar.style.backgroundColor = '';
   }
+  //Preventing bounce effect on mobile browsers
+  if (mediaQuery.matches && currentPosition < 20) {
+    navbar.style.top = '0';
+  }
 
   previousPosition = currentPosition;
 });
 
+// Smooth scrolling to section when navbar element is clicked
+const navElements = document.querySelectorAll('.nav-el');
+
+const smoothScrollNav = () => {
+  navElements.forEach(el => {
+    const attribute = el.getAttribute('href');
+
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      document
+        .querySelector(`${attribute}`)
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+};
+
+smoothScrollNav();
+
+//////POPUPS
 //Displaying sign-up popups
 const allJoinGangBtns = document.querySelectorAll('.join-gang-btn');
 
@@ -213,26 +235,21 @@ closeBtns.forEach((btn, i) => {
     });
   });
 });
-
-//Implementing smooth scroll into 1st section from header home page
+//////IMPLEMENTING SMOOTH SCROLL INTO 1ST SECTION FROM HEADER HOME PAGE
 const joinGangScrollToSectionBtn = document.querySelector('.join-to-gang-btn');
 const section1 = document.querySelector('.section-1-home');
 
 const scrollToSection1 = () => {
-  // const section1Coords = section1.getBoundingClientRect();
-  joinGangScrollToSectionBtn.addEventListener('click', () => {
-    section1.scrollIntoView({ behavior: 'smooth' });
-    // window.scrollTo({
-    //   top: section1Coords.top + window.pageXOffset,
-    //   left: section1Coords.left + window.pageYOffset,
-    //   behavior: 'smooth',
-    // });
-  });
+  if (joinGangScrollToSectionBtn) {
+    joinGangScrollToSectionBtn.addEventListener('click', () => {
+      section1.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 };
 
 scrollToSection1();
 
-//Implementing slider
+//////IMPLEMENTING SLIDER
 const slides = document.querySelectorAll('.slide');
 const nextSlideBtn = document.querySelector('.next-slide-btn');
 const previousSlideBtn = document.querySelector('.previous-slide-btn');
@@ -285,3 +302,29 @@ const previousSlideAttachHandler = () => {
 
 nextSlideAttachHandler();
 previousSlideAttachHandler();
+
+//////ADDING TRANSITION WHEN USER SCROLLS TO EACH SECTION
+const allSections = document.querySelectorAll('.section');
+
+const observeSections = (entries, observer) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  if (entry.isIntersecting) {
+    entry.target.classList.remove('section-effect');
+  }
+
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(observeSections, {
+  root: null,
+  threshold: 0,
+  rootMargin: '-100px',
+});
+
+allSections.forEach(section => {
+  section.classList.add('section-effect');
+  sectionObserver.observe(section);
+});

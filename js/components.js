@@ -24,10 +24,10 @@ class websiteNav extends HTMLElement {
           </button>
         </div>
         <ul>
-          <li><a href="#section-3-home">BLOG</a></li>
+          <li><a class="nav-el" href="#section-3-home">BLOG</a></li>
           <li><a class="gang-members-btn" href="">GANG MEMBERS</a></li>
-          <li><a href="#section-4-home">SOCIAL MEDIA</a></li>
-          <li><a href="#section-5-home">KONTAKT</a></li>
+          <li><a class="nav-el" href="#section-4-home">SOCIAL MEDIA</a></li>
+          <li><a class="nav-el" href="#section-5-home">KONTAKT</a></li>
         </ul>
       </div>
       <button class="hamburger-icon"><i class="ri-menu-3-fill"></i></button>

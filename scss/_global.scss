@@ -32,7 +32,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: chaloops, sans-serif;
+  font-family: chaloops, 'Kalam', sans-serif;
   font-weight: 600;
   font-style: normal;
   color: var(--color-black);
@@ -76,7 +76,7 @@ p {
   }
 
   strong {
-    font-family: chaloops, sans-serif;
+    font-family: chaloops, 'Kalam', sans-serif;
     font-weight: 600;
   }
 }
@@ -120,6 +120,7 @@ button {
   font-size: 2rem;
   padding: 2rem 2.5rem;
   border-radius: 5px;
+  color: var(--color-black);
 }
 
 .yellow-btn:hover {
@@ -138,7 +139,7 @@ button {
 }
 
 .highlight {
-  font-family: chaloops, sans-serif;
+  font-family: chaloops, 'Kalam', sans-serif;
   font-weight: 600;
   background-color: #ffdcf7;
   padding: 0 0.5rem;
