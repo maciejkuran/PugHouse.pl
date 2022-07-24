@@ -1081,6 +1081,14 @@ button {
           transform: translateY(8rem);
 }
 
+.privacy-policy-container {
+  min-height: 100vh;
+  margin-top: 15rem;
+  max-width: 85rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 1604.98px) {
   .post img {
     max-height: 25rem;

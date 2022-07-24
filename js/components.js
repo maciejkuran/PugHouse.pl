@@ -67,15 +67,14 @@ customElements.define('website-footer', websiteFooter);
 class cookies extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<div class="cookies-container hide">
-        <h3>Cookies 🍪</h3>
+        <h3>Prywatność 👀</h3>
         <p>
-          Korzystając ze strony PugHouse.pl wyrażasz <span class="highlight">dobrowolnie</span> zgodę.
-          W każdej chwili możesz zapoznać się z
+          W niektórych obszarach możemy przetworzyć Twoje dane. Zapoznaj się z
           <a target="_blank" href="/polityka-prywatnosci"
             ><span class="highlight">polityką prywatności</span></a
-          >.
+          > PugHouse.pl.
         </p>
-        <button class="cookies-accept-btn pink-btn">OK!</button>
+        <button class="cookies-accept-btn pink-btn">Akceptuję!</button>
       </div>`;
   }
 }
