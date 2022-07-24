@@ -69,7 +69,7 @@ class cookies extends HTMLElement {
     this.innerHTML = `<div class="cookies-container hide">
         <h3>Prywatność 👀</h3>
         <p>
-          W niektórych obszarach możemy przetworzyć Twoje dane. Zapoznaj się z
+          W niektórych obszarach możemy przetwarzać Twoje dane. Zapoznaj się z
           <a target="_blank" href="/polityka-prywatnosci"
             ><span class="highlight">polityką prywatności</span></a
           > PugHouse.pl.
