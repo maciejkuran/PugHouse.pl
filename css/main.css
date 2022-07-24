@@ -518,10 +518,12 @@ button {
 
 .slider-wrapper {
   margin-top: 3rem;
-  min-width: 55%;
+  min-width: 60%;
   min-height: 70rem;
   position: relative;
   overflow: hidden;
+  background-color: var(--color-black);
+  border-radius: 5px;
 }
 .slider-wrapper .slide {
   position: absolute;
@@ -539,6 +541,17 @@ button {
      object-fit: contain;
   -o-object-position: center center;
      object-position: center center;
+}
+
+.img-label {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-family: chaloops, "Kalam", sans-serif;
+  font-weight: 600;
+  background-color: var(--color-strong-blue);
+  padding: 0.3rem;
+  border-radius: 5px;
 }
 
 .slider-btn {
@@ -1545,6 +1558,9 @@ li,
   }
   .slider-wrapper {
     min-height: 30rem;
+  }
+  .img-label {
+    font-size: 1.4rem;
   }
   .gang-members-wrapper {
     grid-template-columns: repeat(2, 1fr);

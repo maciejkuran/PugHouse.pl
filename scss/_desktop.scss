@@ -261,10 +261,12 @@
 
 .slider-wrapper {
   margin-top: 3rem;
-  min-width: 55%;
+  min-width: 60%;
   min-height: 70rem;
   position: relative;
   overflow: hidden;
+  background-color: var(--color-black);
+  border-radius: 5px;
 
   .slide {
     position: absolute;
@@ -280,6 +282,17 @@
       object-position: center center;
     }
   }
+}
+
+.img-label {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-family: chaloops, 'Kalam', sans-serif;
+  font-weight: 600;
+  background-color: var(--color-strong-blue);
+  padding: 0.3rem;
+  border-radius: 5px;
 }
 
 .slider-btn {
