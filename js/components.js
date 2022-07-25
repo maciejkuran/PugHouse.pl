@@ -257,60 +257,32 @@ class gangMembers extends HTMLElement {
             <h4>MOLLY</h4>
             <h5>Toruń</h5>
           </div>
-  
+
           <div class="member">
-            <img src="/img/Molly.png" alt="Molly pug house gang member" />
-            <h4>MOLLY</h4>
+            <img src="/img/Buddy.png" alt="Buddy pug house gang member" />
+            <h4>BUDDY</h4>
+            <h5>Grodzisk Maz.</h5>
+          </div>
+
+          <div class="member">
+            <img src="/img/Bentlay.png" alt="Bentlay pug house gang member" />
+            <h4>BENTLAY</h4>
+            <h5>Grodzisk Maz.</h5>
+          </div>
+
+          <div class="member">
+            <img src="/img/Łukasz.png" alt="Łukasz pug house gang member" />
+            <h4>ŁUKASZ</h4>
             <h5>Toruń</h5>
           </div>
-  
+
           <div class="member">
-            <img src="/img/Molly.png" alt="Molly pug house gang member" />
-            <h4>MOLLY</h4>
-            <h5>Toruń</h5>
+          <img src="/img/Zapisz do gangu Pug House.png" alt="">
+            <h4>TWÓJ PUG</h4>
+            <h5>Dołącz do gangu!</h5>
           </div>
   
-          <div class="member">
-            <img src="/img/Molly.png" alt="Molly pug house gang member" />
-            <h4>MOLLY</h4>
-            <h5>Toruń</h5>
-          </div>
-  
-          <div class="member">
-            <img src="/img/Molly.png" alt="Molly pug house gang member" />
-            <h4>MOLLY</h4>
-            <h5>Toruń</h5>
-          </div>
-  
-          <div class="member">
-            <img src="/img/Molly.png" alt="Molly pug house gang member" />
-            <h4>MOLLY</h4>
-            <h5>Toruń</h5>
-          </div>
-  
-          <div class="member">
-            <img src="/img/Molly.png" alt="Molly pug house gang member" />
-            <h4>MOLLY</h4>
-            <h5>Toruń</h5>
-          </div>
-  
-          <div class="member">
-            <img src="/img/Big Mikey.png" alt="Mikey pug house gang member" />
-            <h4>MIKEY</h4>
-            <h5>Toruń</h5>
-          </div>
-  
-          <div class="member">
-            <img src="/img/Big Mikey.png" alt="Mikey pug house gang member" />
-            <h4>MIKEY</h4>
-            <h5>Toruń</h5>
-          </div>
-  
-          <div class="member">
-            <img src="/img/Big Mikey.png" alt="Mikey pug house gang member" />
-            <h4>MIKEY</h4>
-            <h5>Toruń</h5>
-          </div>
+          
         </div>
       </div>`;
   }
