@@ -24,10 +24,10 @@ class websiteNav extends HTMLElement {
           </button>
         </div>
         <ul>
-          <li><a class="nav-el" href="#section-3-home">BLOG</a></li>
+          <li><a class="nav-el" href="/#section-3-home">BLOG</a></li>
           <li><a class="gang-members-btn" href="">GANG MEMBERS</a></li>
-          <li><a class="nav-el" href="#section-4-home">SOCIAL MEDIA</a></li>
-          <li><a class="nav-el" href="#section-5-home">KONTAKT</a></li>
+          <li><a class="nav-el" href="/#section-4-home">SOCIAL MEDIA</a></li>
+          <li><a class="nav-el" href="/#section-5-home">KONTAKT</a></li>
         </ul>
       </div>
       <button class="hamburger-icon"><i class="ri-menu-3-fill"></i></button>
@@ -247,37 +247,37 @@ class gangMembers extends HTMLElement {
         <button class="close-btn"><i class="ri-close-circle-fill"></i></button>
         <div class="gang-members-wrapper">
           <div class="member">
-            <img src="/img/Big Mikey.png" alt="Mikey pug house gang member" />
+            <img src="/img/Gang Members/Big Mikey.png" alt="Mikey pug house gang member" />
             <h4>MIKEY</h4>
             <h5>Toruń</h5>
           </div>
   
           <div class="member">
-            <img src="/img/Molly.png" alt="Molly pug house gang member" />
+            <img src="/img/Gang Members/Molly.png" alt="Molly pug house gang member" />
             <h4>MOLLY</h4>
             <h5>Toruń</h5>
           </div>
 
           <div class="member">
-            <img src="/img/Buddy.png" alt="Buddy pug house gang member" />
+            <img src="/img/Gang Members/Buddy.png" alt="Buddy pug house gang member" />
             <h4>BUDDY</h4>
             <h5>Grodzisk Maz.</h5>
           </div>
 
           <div class="member">
-            <img src="/img/Bentlay.png" alt="Bentlay pug house gang member" />
+            <img src="/img/Gang Members/Bentlay.png" alt="Bentlay pug house gang member" />
             <h4>BENTLAY</h4>
             <h5>Grodzisk Maz.</h5>
           </div>
 
           <div class="member">
-            <img src="/img/Łukasz.png" alt="Łukasz pug house gang member" />
+            <img src="/img/Gang Members/Łukasz.png" alt="Łukasz pug house gang member" />
             <h4>ŁUKASZ</h4>
             <h5>Toruń</h5>
           </div>
 
           <div class="member">
-          <img src="/img/Zapisz do gangu Pug House.png" alt="">
+          <img src="/img/Gang Members/Zapisz do gangu Pug House.png" alt="">
             <h4>TWÓJ PUG</h4>
             <h5>Dołącz do gangu!</h5>
           </div>
