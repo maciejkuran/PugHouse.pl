@@ -163,13 +163,17 @@ const navElements = document.querySelectorAll('.nav-el');
 
 const smoothScrollNav = () => {
   navElements.forEach(el => {
-    const attribute = el.getAttribute('href');
+    const attribute = el.getAttribute('href').slice(1);
 
     el.addEventListener('click', e => {
-      e.preventDefault();
-      document
-        .querySelector(`${attribute}`)
-        .scrollIntoView({ behavior: 'smooth' });
+      if (document.querySelector(`${attribute}`)) {
+        e.preventDefault();
+        document
+          .querySelector(`${attribute}`)
+          .scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href(`/${attribute}`);
+      }
     });
   });
 };
