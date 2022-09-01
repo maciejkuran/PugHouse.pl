@@ -8,22 +8,19 @@ const removeBorder = () => {
   themeBtns.forEach(btn => btn.classList.remove('active-theme'));
 };
 
-const changeTheme = () => {
-  themeBtns.forEach((btn, i) => {
-    const themeColor = btn.getAttribute('color');
-    btn.addEventListener('click', () => {
-      removeBorder();
-      activeBtn = btn;
-      btn.classList.remove('active-theme');
-      document.querySelector('html').style.backgroundColor = themeColor;
-      btn.classList.add('active-theme');
+const changeTheme = e => {
+  let target = e.target;
+  const themeColor = target.getAttribute('color');
+  removeBorder();
+  activeBtn = target;
 
-      saveThemeToLocalStorage(btn.getAttribute('color'));
-    });
-  });
+  document.querySelector('html').style.backgroundColor = themeColor;
+  target.classList.add('active-theme');
+
+  saveThemeToLocalStorage(target.getAttribute('color'));
 };
 
-changeTheme();
+themeBtns.forEach(btn => btn.addEventListener('click', changeTheme));
 
 //Saving theme to local storage
 const saveThemeToLocalStorage = theme => {
@@ -77,20 +74,15 @@ const welcomeGang = () => {
   const nameInput = document.querySelector('#mce-FNAME');
 
   if (!joinGangBtn) return;
-
-  joinGangBtn.addEventListener('click', e => {
-    if (
-      checkmark.checked &&
-      emailInput.value.includes('@') &&
-      nameInput.value !== ''
-    ) {
-      signUpContainer.classList.add('hide');
-      welcomeContainer.classList.remove('hide');
-    }
-  });
+  //prettier-ignore
+  if (checkmark.checked && emailInput.value.includes('@') 
+  && nameInput.value !== '') {
+    signUpContainer.classList.add('hide');
+    welcomeContainer.classList.remove('hide');
+  }
 };
 
-welcomeGang();
+joinGangBtn.addEventListener('click', welcomeGang);
 
 //////NAVIGATION
 ////Mobile/tablet navigation
@@ -102,14 +94,12 @@ const navSticky = document.querySelector('.navigation-sticky-properties');
 const mediaQuery = window.matchMedia('(max-width: 705.98px)');
 
 const showNav = () => {
-  hamburgerIcon.addEventListener('click', e => {
-    websiteNav.style.display = 'flex';
-    backgroundOverlay.classList.remove('hide');
-    navSticky.style.zIndex = '3';
-  });
+  websiteNav.style.display = 'flex';
+  backgroundOverlay.classList.remove('hide');
+  navSticky.style.zIndex = '3';
 };
 
-showNav();
+hamburgerIcon.addEventListener('click', showNav);
 
 //Closing nav
 const closeNav = () => {
@@ -135,9 +125,9 @@ window.addEventListener('resize', () => {
 
 // Hide Navbar when scroll down, show when scroll up
 const navbar = document.querySelector('.website-navigation');
-let previousPosition;
 
-window.addEventListener('scroll', e => {
+let previousPosition;
+const showOrHideNavbar = () => {
   let currentPosition = window.pageYOffset;
 
   if (previousPosition > currentPosition) {
@@ -156,70 +146,66 @@ window.addEventListener('scroll', e => {
   }
 
   previousPosition = currentPosition;
-});
+};
+
+window.addEventListener('scroll', showOrHideNavbar);
 
 // Smooth scrolling to section when navbar element is clicked
 const navElements = document.querySelectorAll('.nav-el');
 
-const smoothScrollNav = () => {
-  navElements.forEach(el => {
-    const attribute = el.getAttribute('href').slice(1);
+const smoothScrollNav = e => {
+  let attribute = e.target.getAttribute('href').slice(1);
 
-    el.addEventListener('click', e => {
-      if (document.querySelector(`${attribute}`)) {
-        e.preventDefault();
-        document
-          .querySelector(`${attribute}`)
-          .scrollIntoView({ behavior: 'smooth' });
-      } else {
-        window.location.href(`/${attribute}`);
-      }
-    });
-  });
+  if (document.querySelector(`${attribute}`)) {
+    e.preventDefault();
+    document
+      .querySelector(`${attribute}`)
+      .scrollIntoView({ behavior: 'smooth' });
+  } else {
+    window.location.href(`/${attribute}`);
+  }
 };
 
-smoothScrollNav();
+navElements.forEach(el => el.addEventListener('click', smoothScrollNav));
 
 //////POPUPS
 //Displaying sign-up popups
 const allJoinGangBtns = document.querySelectorAll('.join-gang-btn');
 
-allJoinGangBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    signUpContainer.classList.remove('hide');
-    backgroundOverlay.classList.remove('hide');
-    navSticky.style.zIndex = '1';
-  });
-});
+const displaySignUpPopups = () => {
+  signUpContainer.classList.remove('hide');
+  backgroundOverlay.classList.remove('hide');
+  navSticky.style.zIndex = '1';
+};
+
+allJoinGangBtns.forEach(btn =>
+  btn.addEventListener('click', displaySignUpPopups)
+);
 
 //Displaying gang members popup
 const gangMembersContainer = document.querySelector('.section-gang-members');
 const gangMembersBtns = document.querySelectorAll('.gang-members-btn');
 
-const displayGangMembers = () => {
-  gangMembersBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      gangMembersContainer.classList.remove('hide');
-      backgroundOverlay.classList.remove('hide');
-      navSticky.style.zIndex = '1';
+const displayGangMembers = e => {
+  e.preventDefault();
 
-      if (
-        mediaQuery.matches &&
-        !gangMembersContainer.classList.contains('hide')
-      ) {
-        websiteNav.style.display = 'none';
-      }
-    });
-  });
+  gangMembersContainer.classList.remove('hide');
+  backgroundOverlay.classList.remove('hide');
+  navSticky.style.zIndex = '1';
+
+  if (mediaQuery.matches && !gangMembersContainer.classList.contains('hide')) {
+    websiteNav.style.display = 'none';
+  }
 };
 
-displayGangMembers();
+gangMembersBtns.forEach(btn =>
+  btn.addEventListener('click', displayGangMembers)
+);
 
 //Closing popups on background overlay click
 const allPopups = document.querySelectorAll('.popup');
 
-backgroundOverlay.addEventListener('click', () => {
+const closePopupsOnOverlayClick = () => {
   closeNav();
   allPopups.forEach(popup => {
     if (!popup.classList.contains('hide')) {
@@ -227,7 +213,9 @@ backgroundOverlay.addEventListener('click', () => {
       backgroundOverlay.classList.add('hide');
     }
   });
-});
+};
+
+backgroundOverlay.addEventListener('click', closePopupsOnOverlayClick);
 
 //Closing popups on close-btn
 const closeBtns = document.querySelectorAll('.close-btn');
@@ -245,14 +233,10 @@ const joinGangScrollToSectionBtn = document.querySelector('.join-to-gang-btn');
 const section1 = document.querySelector('.section-1-home');
 
 const scrollToSection1 = () => {
-  if (joinGangScrollToSectionBtn) {
-    joinGangScrollToSectionBtn.addEventListener('click', () => {
-      section1.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
+  section1.scrollIntoView({ behavior: 'smooth' });
 };
 
-scrollToSection1();
+joinGangScrollToSectionBtn?.addEventListener('click', scrollToSection1);
 
 //////IMPLEMENTING SLIDER
 const slides = document.querySelectorAll('.slide');
@@ -292,21 +276,9 @@ const previousSlide = () => {
   setSlide(currentSlide);
 };
 
-//Avoiding 'Cannot read properties of null (reading 'addEventListener')' in other documents if btn DOES NOT EXIST
-const nextSlideAttachHandler = () => {
-  if (nextSlideBtn) {
-    nextSlideBtn.addEventListener('click', nextSlide);
-  }
-};
+nextSlideBtn?.addEventListener('click', nextSlide);
 
-const previousSlideAttachHandler = () => {
-  if (previousSlideBtn) {
-    previousSlideBtn.addEventListener('click', previousSlide);
-  }
-};
-
-nextSlideAttachHandler();
-previousSlideAttachHandler();
+previousSlideBtn?.addEventListener('click', previousSlide);
 
 //////ADDING TRANSITION WHEN USER SCROLLS TO EACH SECTION
 const allSections = document.querySelectorAll('.section');
@@ -339,23 +311,21 @@ const cookiesAcceptBtn = document.querySelector('.cookies-accept-btn');
 const cookiesContainer = document.querySelector('.cookies-container');
 
 const showCookiesInfo = () => {
-  document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('pughouse-cookies') === 'accepted') {
-      cookiesContainer.classList.add('hide');
-    } else {
-      cookiesContainer.classList.remove('hide');
-      backgroundOverlay.classList.remove('hide');
-      cookiesStoreData();
-    }
-  });
+  if (localStorage.getItem('pughouse-cookies') === 'accepted') {
+    cookiesContainer.classList.add('hide');
+  } else {
+    cookiesContainer.classList.remove('hide');
+    backgroundOverlay.classList.remove('hide');
+    cookiesStoreData();
+  }
 };
 
-showCookiesInfo();
+document.addEventListener('DOMContentLoaded', showCookiesInfo);
 
 const cookiesStoreData = () => {
-  cookiesAcceptBtn.addEventListener('click', () => {
-    localStorage.setItem('pughouse-cookies', 'accepted');
-    cookiesContainer.classList.add('hide');
-    backgroundOverlay.classList.add('hide');
-  });
+  localStorage.setItem('pughouse-cookies', 'accepted');
+  cookiesContainer.classList.add('hide');
+  backgroundOverlay.classList.add('hide');
 };
+
+cookiesAcceptBtn.addEventListener('click', cookiesStoreData);
