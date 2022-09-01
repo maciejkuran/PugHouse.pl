@@ -462,9 +462,10 @@
   padding: 3rem;
   max-width: 80%;
   max-height: 80vh;
-  border-radius: 5px;
   overflow: scroll;
   overflow-x: hidden;
+  border: solid 5px var(--color-very-light-grey);
+  border-radius: 5px;
 }
 
 .close-btn {
