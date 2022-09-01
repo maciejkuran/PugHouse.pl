@@ -28,6 +28,12 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/gang-members.js"></script>
+    <script defer type="module" src="/js/validation-mailchimp.js"></script>
+
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -46,7 +52,16 @@
 
     <button class="join-gang-btn join">DOŁĄCZ</button>
 
-    <gang-members-container></gang-members-container>
+    <!-- /////////////////////////////
+    Here are gang members displayed -->
+    <div class="section-gang-members popup hide">
+      <h3>GANG MEMBERS</h3>
+      <button class="close-btn"><i class="ri-close-circle-fill"></i></button>
+      <div class="gang-members-wrapper">
+        <!-- ----Inserted here with JS ---- -->
+      </div>
+    </div>
+    <!-- ---------------------------------------------------- -->
 
     <sign-up-container></sign-up-container>
 
@@ -55,9 +70,5 @@
     <cookies-container></cookies-container>
 
     <div class="full-background-overlay hide"></div>
-
-    <script type="module" src="/js/components.js"></script>
-    <script type="module" src="/js/main.js"></script>
-    <script type="module" src="/js/validation-mailchimp.js"></script>
   </body>
 </html>
