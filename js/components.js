@@ -239,57 +239,6 @@ class signUpContainer extends HTMLElement {
 
 customElements.define('sign-up-container', signUpContainer);
 
-////Gang members component
-class gangMembers extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `<div class="section-gang-members popup hide">
-        <h3>GANG MEMBERS</h3>
-        <button class="close-btn"><i class="ri-close-circle-fill"></i></button>
-        <div class="gang-members-wrapper">
-          <div class="member">
-            <img src="/img/Gang Members/Big Mikey.png" alt="Mikey pug house gang member" />
-            <h4>MIKEY</h4>
-            <h5>Toruń</h5>
-          </div>
-  
-          <div class="member">
-            <img src="/img/Gang Members/Molly.png" alt="Molly pug house gang member" />
-            <h4>MOLLY</h4>
-            <h5>Toruń</h5>
-          </div>
-
-          <div class="member">
-            <img src="/img/Gang Members/Buddy.png" alt="Buddy pug house gang member" />
-            <h4>BUDDY</h4>
-            <h5>Grodzisk Maz.</h5>
-          </div>
-
-          <div class="member">
-            <img src="/img/Gang Members/Bentlay.png" alt="Bentlay pug house gang member" />
-            <h4>BENTLAY</h4>
-            <h5>Grodzisk Maz.</h5>
-          </div>
-
-          <div class="member">
-            <img src="/img/Gang Members/Łukasz.png" alt="Łukasz pug house gang member" />
-            <h4>ŁUKASZ</h4>
-            <h5>Toruń</h5>
-          </div>
-
-          <div class="member">
-          <img src="/img/Gang Members/Zapisz do gangu Pug House.png" alt="">
-            <h4>TWÓJ PUG</h4>
-            <h5>Dołącz do gangu!</h5>
-          </div>
-  
-          
-        </div>
-      </div>`;
-  }
-}
-
-customElements.define('gang-members-container', gangMembers);
-
 ////Post sidebar component
 class postSidebar extends HTMLElement {
   connectedCallback() {
