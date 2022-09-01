@@ -14,6 +14,12 @@ Live website ❤ https://pughouse.pl
   <img src="/img/Pug House.gif">
 </p>
 
+## Project's scope
+
+- graphic design (logo, custom graphics made in Adobe PS and AI)
+- UI & UX design (Adobe xD)
+- coding (VS Code)
+
 ## Functionalities and Concepts in short
 
 - theme change (white, pink, blue) and storing theme in `localStorage`
