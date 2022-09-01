@@ -62,7 +62,7 @@ const member_4 = new GangMember(
 );
 
 const member_5 = new GangMember(
-  '/img/Gang Members/Łukasz.png',
+  '/img/Gang Members/Lukasz.png',
   'Łukasz pug house gang member',
   'ŁUKASZ',
   'Toruń'
