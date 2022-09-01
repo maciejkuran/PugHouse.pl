@@ -46,6 +46,12 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <script defer type="module" src="/js/components.js"></script>
+    <script defer type="module" src="/js/main.js"></script>
+    <script defer type="module" src="/js/gang-members.js"></script>
+    <script defer type="module" src="/js/validation-mailchimp.js"></script>
+
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -146,7 +152,7 @@
                 zapytał o nie. Krótko po tym
                 <span class="highlight">dostałam Mikeya</span> pod swoje
                 skrzydła, ze względu na wylot Maćka do USA. Tak narodziła się
-                nasza z początku szorstka przyjaźń
+                nasza z początku
                 <span class="highlight">szorstka przyjaźń</span> z Mikeyem.
               </p>
             </section>
@@ -170,7 +176,7 @@
               <p>
                 Przyszedł czas na zamieszkanie razem, oświadczyny i
                 <span class="highlight">drugiego mopsiaka!</span> Miał być
-                czarny ale uparłam się na beżowego.
+                czarny, ale uparłam się na beżowego.
               </p>
               <p>
                 Ustaliliśmy, że poszukamy
@@ -179,7 +185,7 @@
                 >
                 której ktoś inny już nie chce (okrutne przypadki ale prawdziwe).
                 Tak, niestety, przyszło nam żyć w czasach, gdzie pieski się
-                nudzą, są kaprysem, czy nietrafionym prezentem itp. Zatem po
+                nudzą, są kaprysem, czy nietrafionym prezentem. Zatem po
                 przejrzeniu ogłoszeń w oko wpadła nam „klucha” -
                 <span class="highlight">
                   słodka utuczona dwuletnia „klucha”.
@@ -196,9 +202,9 @@
                 będą się czuć w swoim towarzystwie.
               </p>
               <p>
-                Akceptacja, to podstawa zdrowego związku i między ludźmi i
-                między psiakami. Spokojnie, to nie blog o akceptacji ;) To nadal
-                blog o mopsach.
+                Akceptacja to podstawa zdrowego związku, zarówno między ludźmi,
+                jak i między psiakami. Spokojnie, to nie blog o akceptacji ;) To
+                nadal blog o mopsach.
               </p>
             </section>
             <section class="post-section-divider">
@@ -243,8 +249,8 @@
                 >
               </p>
               <p>
-                To nie była łatwa decyzja. Z perspektywy czasu a w zasadzie lat,
-                które już upłynęły, mogę potwierdzić, że jest ciężko.
+                To nie była łatwa decyzja. Z perspektywy czasu, a w zasadzie
+                lat, które już upłynęły, mogę potwierdzić, że jest ciężko.
                 Szczególnie w kontekście zdrowia i codziennej pielęgnacji.
               </p>
               <p>
@@ -270,8 +276,8 @@
               <p>
                 <span class="highlight">Początkowo Mikey był obojętny,</span>
                 wskakiwał na kanapę, gdy chciał trochę spokoju. Molly oczywiście
-                nie dawała rady z powodu sporej nadwagi, więc był to jego azyl,
-                a my to szanowaliśmy. Mops to mops, swoje lubi.
+                nie dawała rady z powodu sporej nadwagi, więc był to jego azyl.
+                My to szanowaliśmy. Mops to mops, swoje lubi.
               </p>
               <p>
                 Z czasem zauważyliśmy jak
@@ -306,7 +312,7 @@
                 >Molly wtulała się w Mikeya również w ciągu dnia. Często była na
                 naszych kolanach. Trzeba jej oddać, że ile miłości otrzymuje od
                 nas, to po dziesięciokroć nam oddaje. Miłości ma w sobie chyba
-                tyle co przestrzeń kosmosu. Nawet w Klinice Weterynaryjnej, w
+                tyle co przestrzeń kosmosu. Nawet w klinice weterynaryjnej, w
                 której cały czas prowadzą leczenie Molly i profilaktykę Mikeya,
                 cały Team mówi, że
                 <span class="highlight"
@@ -345,9 +351,9 @@
                 Nasze mopsy, Mikey i Molly są spełnieniem naszych marzeń, z
                 czasem nawet
                 <span class="highlight"
-                  >nabrali wartości dobrego używanego samochodu 😀.</span
-                >
-                Jednak ich zdrowie jest najważniejsze dla nas.
+                  >nabrali wartości dobrego używanego samochodu 😀</span
+                >(ze względu na ilość odbytych zabiegów). Jednak ich zdrowie
+                jest najważniejsze dla nas.
               </p>
               <p>
                 Należy być świadomym, że jest to
@@ -357,8 +363,8 @@
               </p>
               <p>
                 Nasze mopsy to recepta na udany dzień! Ich psoty i figle zawsze
-                rozweselą, tak samo jak płacz o dodatkową porcję karmy lub
-                kawałków owoców 😎.
+                rozweselą, tak samo jak płacz o dodatkową porcję karmy lub owoce
+                😎.
               </p>
             </section>
             <section class="post-section-divider">
@@ -441,7 +447,16 @@
     <!-- Reusable components -->
     <button class="join-gang-btn join">DOŁĄCZ</button>
 
-    <gang-members-container></gang-members-container>
+    <!-- /////////////////////////////
+    Here are gang members displayed -->
+    <div class="section-gang-members popup hide">
+      <h3>GANG MEMBERS</h3>
+      <button class="close-btn"><i class="ri-close-circle-fill"></i></button>
+      <div class="gang-members-wrapper">
+        <!-- ----Inserted here with JS ---- -->
+      </div>
+    </div>
+    <!-- ---------------------------------------------------- -->
 
     <sign-up-container></sign-up-container>
 
@@ -450,10 +465,6 @@
     <cookies-container></cookies-container>
 
     <div class="full-background-overlay hide"></div>
-
-    <script type="module" src="/js/components.js"></script>
-    <script type="module" src="/js/main.js"></script>
-    <script type="module" src="/js/validation-mailchimp.js"></script>
 
     <div id="fb-root"></div>
     <script
