@@ -4,7 +4,7 @@
 
 # PugHouse.pl
 
-Pug lovers & owners. Crazy blog and community 🐾❤️.
+Pug lovers & owners. Cosy blog and community 🐾❤️.
 
 The orderer: my wife 👩‍🦱
 
