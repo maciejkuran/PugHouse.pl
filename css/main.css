@@ -1288,6 +1288,10 @@ button {
   .post-header {
     height: 70vh;
   }
+  .post-info h1 {
+    font-size: 4rem;
+    line-height: 50px;
+  }
 }
 @media (max-width: 1178.98px) {
   .gang-members-wrapper {
@@ -1409,10 +1413,6 @@ li b,
   .post-header {
     height: 55vh;
   }
-  .post-info h1 {
-    font-size: 4rem;
-    line-height: 50px;
-  }
   .author-info span {
     font-size: 1.6rem;
   }
@@ -1489,7 +1489,7 @@ li b,
     line-height: 45px;
   }
   .post-header {
-    height: 45vh;
+    height: 50vh;
   }
   .join-gang-banner {
     max-width: 40rem;
@@ -1518,15 +1518,13 @@ li b,
     grid-template-columns: repeat(3, 1fr);
   }
   .post-header {
-    height: 47vh;
-  }
-  .post-header {
+    margin-top: 8rem;
+    min-height: 0;
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 8rem;
-    min-height: 100vh;
   }
   .post-info {
     margin: 1.5rem 0;
@@ -1546,7 +1544,14 @@ li b,
             align-items: center;
   }
   .post-main-img {
+    height: auto;
     width: 100%;
+  }
+  .post-main-img img {
+    max-width: 100%;
+  }
+  .author-info {
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 705.98px) {
@@ -1760,20 +1765,6 @@ li,
   }
   .welcome-letter-container h3 {
     font-size: 2.5rem;
-  }
-  .post-header {
-    min-height: 0;
-    height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .post-main-img {
-    height: auto;
-  }
-  .post-main-img img {
-    max-width: 100%;
   }
 }
 @media (max-width: 404.98px) {

@@ -92,6 +92,13 @@
   .post-header {
     height: 70vh;
   }
+
+  .post-info {
+    h1 {
+      font-size: 4rem;
+      line-height: 50px;
+    }
+  }
 }
 
 @media (max-width: 1178.98px) {
@@ -232,13 +239,6 @@
     height: 55vh;
   }
 
-  .post-info {
-    h1 {
-      font-size: 4rem;
-      line-height: 50px;
-    }
-  }
-
   .author-info {
     span {
       font-size: 1.6rem;
@@ -321,7 +321,7 @@
   }
 
   .post-header {
-    height: 45vh;
+    height: 50vh;
   }
 
   .join-gang-banner {
@@ -364,13 +364,10 @@
   }
 
   .post-header {
-    height: 47vh;
-  }
-
-  .post-header {
-    flex-direction: column;
     margin-top: 8rem;
-    min-height: 100vh;
+    min-height: 0;
+    height: auto;
+    flex-direction: column;
   }
 
   .post-info {
@@ -383,7 +380,16 @@
   }
 
   .post-main-img {
+    height: auto;
     width: 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .author-info {
+    margin-bottom: 1rem;
   }
 }
 
@@ -629,19 +635,26 @@
     }
   }
 
-  .post-header {
-    min-height: 0;
-    height: auto;
-    flex-direction: column;
-  }
+  // .post-header {
+  //   min-height: 0;
+  //   height: auto;
+  //   flex-direction: column;
+  // }
 
-  .post-main-img {
-    height: auto;
+  // .post-info {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
 
-    img {
-      max-width: 100%;
-    }
-  }
+  // .post-main-img {
+  //   height: auto;
+
+  //   img {
+  //     max-width: 100%;
+  //   }
+  // }
 }
 
 @media (max-width: 404.98px) {
