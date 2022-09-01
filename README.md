@@ -10,6 +10,10 @@ The orderer: my wife 👩‍🦱
 
 Live website ❤ https://pughouse.pl
 
+<p align="center">
+  <img src="/img/Pug House.gif">
+</p>
+
 ## Functionalities and Concepts in short
 
 - theme change (white, pink, blue) and storing theme in `localStorage`
