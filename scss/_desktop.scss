@@ -853,10 +853,11 @@
 
 .privacy-policy-container {
   min-height: 100vh;
-  margin-top: 15rem;
+  margin-top: 10rem;
   max-width: 85rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
 }
 
 .content404 {
@@ -865,4 +866,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+
+  h1,
+  p {
+    text-align: center;
+  }
 }
