@@ -74,3 +74,4 @@ const member_6 = new GangMember(
   'TWÓJ PUG',
   'Dołącz do gangu!'
 );
+
