@@ -34,44 +34,50 @@ const GangMember = class {
 };
 
 const member_1 = new GangMember(
-  '/img/Gang Members/Big Mikey.png',
-  'Mikey pug house gang member',
-  'MIKEY',
-  'Toruń'
-);
-
-const member_2 = new GangMember(
-  '/img/Gang Members/Molly.png',
-  'Molly pug house gang member',
-  'MOLLY',
-  'Toruń'
-);
-
-const member_3 = new GangMember(
-  '/img/Gang Members/Buddy.png',
-  'Buddy pug house gang member',
-  'BUDDY',
-  'Grodzisk Maz.'
-);
-
-const member_4 = new GangMember(
-  '/img/Gang Members/Bentlay.png',
-  'Bentlay pug house gang member',
-  'BENTLAY',
-  'Grodzisk Maz.'
-);
-
-const member_5 = new GangMember(
-  '/img/Gang Members/Lukasz.png',
-  'Łukasz pug house gang member',
-  'ŁUKASZ',
-  'Toruń'
-);
-
-const member_6 = new GangMember(
   '/img/Gang Members/Zapisz do gangu Pug House.png',
   'Pug House gang mopsów',
   'TWÓJ PUG',
   'Dołącz do gangu!'
 );
 
+const member_2 = new GangMember(
+  '/img/Gang Members/Big Mikey.png',
+  'Mikey pug house gang member',
+  'MIKEY',
+  'Toruń'
+);
+
+const member_3 = new GangMember(
+  '/img/Gang Members/Molly.png',
+  'Molly pug house gang member',
+  'MOLLY',
+  'Toruń'
+);
+
+const member_4 = new GangMember(
+  '/img/Gang Members/Buddy.png',
+  'Buddy pug house gang member',
+  'BUDDY',
+  'Grodzisk Maz.'
+);
+
+const member_5 = new GangMember(
+  '/img/Gang Members/Bentlay.png',
+  'Bentlay pug house gang member',
+  'BENTLAY',
+  'Grodzisk Maz.'
+);
+
+const member_6 = new GangMember(
+  '/img/Gang Members/Lukasz.png',
+  'Łukasz pug house gang member',
+  'ŁUKASZ',
+  'Toruń'
+);
+
+const member_7 = new GangMember(
+  '/img/Gang Members/Tofik.png',
+  'Tofik pug house gang member',
+  'Tofik',
+  'Gdynia'
+);
