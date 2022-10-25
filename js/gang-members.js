@@ -81,3 +81,10 @@ const member_7 = new GangMember(
   'Tofik',
   'Gdynia'
 );
+
+const member_8 = new GangMember(
+  '/img/Gang Members/Gustaw.png',
+  'Gustaw pug house gang member',
+  'Gustaw',
+  'Wrocław'
+);
