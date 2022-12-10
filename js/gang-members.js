@@ -97,7 +97,7 @@ const member_9 = new GangMember(
 );
 
 const member_10 = new GangMember(
-  '/img/Gang Members/Dejzi Gorzów Wlkp.png',
+  '/img/Gang Members/Dejzi Gorzow Wlkp.png',
   'Dejzi pug house gang member',
   'DEJZI',
   'Gorzów Wlkp.'
