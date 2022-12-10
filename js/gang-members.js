@@ -78,13 +78,27 @@ const member_6 = new GangMember(
 const member_7 = new GangMember(
   '/img/Gang Members/Tofik.png',
   'Tofik pug house gang member',
-  'Tofik',
+  'TOFIK',
   'Gdynia'
 );
 
 const member_8 = new GangMember(
   '/img/Gang Members/Gustaw.png',
   'Gustaw pug house gang member',
-  'Gustaw',
+  'GUSTAW',
   'Wrocław'
+);
+
+const member_9 = new GangMember(
+  '/img/Gang Members/Oxy Warszawa.png',
+  'Oxy pug house gang member',
+  'OXY',
+  'Warszawa'
+);
+
+const member_10 = new GangMember(
+  '/img/Gang Members/Dejzi Gorzów Wlkp.png',
+  'Dejzi pug house gang member',
+  'DEJZI',
+  'Gorzów Wlkp.'
 );
